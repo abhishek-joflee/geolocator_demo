@@ -36,6 +36,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Position? position;
 
   void _incrementCounter() async {
+    // call the function when button tapped
     try {
       position = await _determinePosition();
       log("$position");
@@ -82,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-/// Determine the current position of the device.
+/// A function which determine the current position of the device.
 ///
 /// When the location services are not enabled or permissions
 /// are denied the `Future` will return an error.
